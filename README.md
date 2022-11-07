@@ -35,7 +35,8 @@ As a good friend, you are requested by your friend, who has received an inherita
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
+* 1 - The client is interested in discovering how the house attributes correlate with the sale price.
+  * Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
@@ -135,7 +136,9 @@ The dashboard should contain:
 
 * A project summary page, showing the project dataset summary and the client's requirements.
 * A page listing your findings related to which features have the strongest correlation to the house sale price.
-* A page displaying the 4 houses' attributes and their respective predicted sale price. It should display a message informing the summed predicted price for all 4 inherited houses. You should add interactive input widgets that allow a user to provide real-time house data to predict the sale price.
+* A page displaying the 4 houses' attributes and their respective predicted sale price.
+  * It should display a message informing the summed predicted price for all 4 inherited houses.
+  * Add interactive input widgets that allow a user to provide real-time house data to predict the sale price.
 * A page indicating your project hypothesis(es) and how you validated it across the project.
 * A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
 
