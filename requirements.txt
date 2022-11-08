@@ -3,6 +3,7 @@ pandas==1.4.2
 matplotlib==3.3.1
 seaborn==0.11.0
 pandas-profiling==3.1.0
+ipywidgets==8.0.2
 plotly==4.12.0
 ppscore==1.2.0
 
