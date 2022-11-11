@@ -146,6 +146,11 @@ The dashboard should contain:
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
+## Fixed Bugs
+* In data_collection.ipynb after unzipping the Kaggle dataset download I moved the csv dataset files to the raw directory.
+  * As a result this notebook would not run hands free when attempting to access the dataset csv using pandas read.
+  * Instead of adding a mv file command I decided to just stick to using the path to which the file unzipped. 
+
 ## Deployment
 ### Heroku
 
