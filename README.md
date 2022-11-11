@@ -167,8 +167,8 @@ The dashboard should contain:
 ## Credits 
 
 ### Guidelines
-* In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+- In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+- You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 ### Content 
 
@@ -180,7 +180,11 @@ The dashboard should contain:
 - The photos used on the home and sign up page are from This Open Source site
 - The images used for the gallery page were taken from this other open source site
 
+### References
+- https://stackoverflow.com/
+- https://pandas.pydata.org/
+- https://numpy.org/
 
 ## Acknowledgements (optional)
-* A big thanks to Code Institutes' Fernando Doreto, Yoni Lavi, Niel Mc Ewen, Matt Rudge, Gyan Shashwat for the LMS material.
-* Precious Ijege my project mentor
+- A big thanks to Code Institutes' Fernando Doreto, Yoni Lavi, Niel Mc Ewen, Matt Rudge, Gyan Shashwat for the LMS material.
+- Precious Ijege my project mentor
