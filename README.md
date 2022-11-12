@@ -186,6 +186,7 @@ The dashboard should contain:
 - The images used for the gallery page were taken from this other open source site
 
 ### References
+- This project was written based on the guidelines provided in the Customer Churn walk through project, data collection lesson.
 - https://stackoverflow.com/
 - https://pandas.pydata.org/
 - https://numpy.org/
