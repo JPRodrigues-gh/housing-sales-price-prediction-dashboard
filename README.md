@@ -187,6 +187,8 @@ The dashboard should contain:
 
 ### References
 - This project was written based on the guidelines provided in the Customer Churn walk through project, data collection lesson.
+  - Most of the functions used in this project were taken directly from the notebooks from the Customer Churn walk through project.
+- Functions from the ML Feature Engine lesson have also been used in this project
 - https://stackoverflow.com/
 - https://pandas.pydata.org/
 - https://numpy.org/
