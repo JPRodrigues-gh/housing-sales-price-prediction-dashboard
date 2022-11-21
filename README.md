@@ -142,6 +142,38 @@ The dashboard should contain:
 * A page indicating your project hypothesis(es) and how you validated it across the project.
 * A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
 
+### Page 1: Quick project summary
+* Quick project summary
+	* Project Terms & Jargon
+	* Describe Project Dataset
+	* State Business Requirements
+
+### Page 2: Customer Base Churn Study
+* Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
+* After data analysis, we agreed with stakeholders that the page will: 
+	* State business requirement 1
+	* Checkbox: data inspection on customer base (display the number of rows and columns in the data, and display the first ten rows of the data)
+	* Display the most correlated variables to churn and the conclusions
+	* Checkbox: Individual plots showing the churn levels for each correlated variable 
+	* Checkbox: Parallel plot using Churn and correlated variables 
+
+### Page 3: Prospect Churnometer
+* State business requirement 2
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Churn, Tenure and Cluster.
+* "Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will churn or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the churn and tenure predictions, the page will inform the associated probability for churning and for tenure level.
+
+### Page 4: Project Hypothesis and Validation
+* Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
+* 1 - We suspect customers are churning with low tenure levels
+	* Correct. The correlation study at Churned Customer Study supports that.
+* 2 -  A customer survey showed our customers appreciate fibre Optic.
+	* A churned user typically has Fiber Optic, as demonstrated by a Churned Customer Study. The insight will be taken to the survey team for further discussions and investigations.
+
+### Page 5: Predict Property Sale Price
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
