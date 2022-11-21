@@ -37,7 +37,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price.
   * Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
-* 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
+* 2 - The client is interested in predicting the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
 ### Project Considerations
@@ -72,7 +72,6 @@ Although your friend has an excellent understanding of property prices in her ow
   
   * Hypothesis for the housing prices:
     * An evaluation of sales prices of other houses in the area based on attributes similar to attributes of each of the clients 4 inherited houses should provide a prediction of sales price for each house respectively
-
 
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
