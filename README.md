@@ -71,7 +71,8 @@ Although your friend has an excellent understanding of property prices in her ow
     * In this case, a model trained on the data to predict exactly when is the best time to maintain a tool, would be how to evaluate and test the hypothesis.
   
   * Hypothesis for the housing prices:
-    * An evaluation of sales prices of other houses in the area based on attributes similar to attributes of each of the clients 4 inherited houses should provide a prediction of sales price for each house respectively
+    * An evaluation of sales prices of other houses in the area based on attributes similar to attributes of each of the clients 4 inherited houses should provide a prediction of sales price for each house respectively.
+    * The correlation analysis shows that the sizes of the ground floor living area, the first floor, the basement and the garage, play a key role in determining house price. In addition, the year the house was built and the overall quality of materials used and the finishes in the house also play a significant role in determining house price.
 
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
