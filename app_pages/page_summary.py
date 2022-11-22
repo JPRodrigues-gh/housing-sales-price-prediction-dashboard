@@ -1,3 +1,8 @@
+'''
+This file and the contents thereof were taken from the 
+ Churnometer Walkthrough Project 2 and customised for
+ this project
+'''
 import streamlit as st
 
 def page_summary_body():
