@@ -80,7 +80,7 @@ def variable_correlation_to_sale_price(df_eda):
                      'OverallQual', 'TotalBsmtSF', 'YearBuilt']
     for col in corr_var_list:
         plot_numerical(df_eda, col, target_var)
-        print("\n\n")
+        st.write("\n\n")
 
 
 def plot_numerical(df, col, target_var):
