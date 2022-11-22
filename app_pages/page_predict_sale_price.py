@@ -48,5 +48,5 @@ def page_predict_sale_price_body():
     st.write("### Evaluate Pipeline Performance")
     regression_performance(X_train, y_train, X_test, y_test, sale_price_pipe)
     regr_eval_plots = plt.imread(f"{path}/regression_evaluation_plots.png")
-    st.image(regression_evaluation_plots)
+    st.image(regr_eval_plots)
     st.write("---")
