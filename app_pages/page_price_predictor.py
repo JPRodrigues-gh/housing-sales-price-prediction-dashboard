@@ -27,9 +27,25 @@ def page_price_predictor_body():
         f" for her 4 inherited houses, and any other house in Ames, Iowa."
         )
     st.write("---")
+    st.write("### Inherited houses price prediction")
+    st.info(
+        f"* Below are the details of the inherited "
+        f"houses and their respective price predictions."
+        )
+    predict_inherited_house_price(price_pipe, price_features)
+
+    st.write("---")
 
     # Generate Live Data
-    # check_variables_for_UI(price_features)
+    check_var = False
+    if check_var:
+        check_variables_for_UI(price_features)
+
+    st.write("### Houses Price Predictor")
+    st.info(
+        f"* Enter the values for the property for "
+        f"which you require a **price prediction**."
+        )
     X_live = DrawInputsWidgets()
 
     # predict on live data
@@ -37,6 +53,31 @@ def page_price_predictor_body():
         price_prediction = predict_sale_price(X_live,
                                               price_features,
                                               price_pipe)
+        # logic to display the sale price
+        statement = (
+            f"* The predicted selling price for this house "
+            f"is \u20AC{price_prediction}"
+            )
+
+        st.write(statement)
+
+
+def predict_inherited_house_price(price_pipe, price_features):
+    inherited = load_clean_data("inherited")
+    row_count = len(inherited)
+    inherited.index = range(1, row_count+1)
+    for x in range(row_count):
+        X_live = inherited.iloc[[x]]
+        st.write(X_live)
+        price_prediction = predict_sale_price(X_live,
+                                              price_features,
+                                              price_pipe)
+        price_prediction = "%.2f" % price_prediction
+        statement = (
+            f"* The predicted selling price for house "
+            f"{x+1} is \u20AC{price_prediction}"
+            )
+        st.write(statement)
 
 
 def check_variables_for_UI(price_features):
@@ -57,24 +98,25 @@ def check_variables_for_UI(price_features):
 def DrawInputsWidgets():
 
     # load dataset
-    df = load_clean_data()
+    df = load_clean_data("heritage")
     percentageMin, percentageMax = 0.4, 2.0
 
-    # we create input widgets only for 6 features
-    col1, col2, col3, col4 = st.beta_columns(4)
-    col5, col6, col7, col8 = st.beta_columns(4)
-    col9, col10, col11, col12 = st.beta_columns(4)
+    # we create input widgets for all features
+    col1, col2, col3 = st.beta_columns(3)
+    col4, col5, col6 = st.beta_columns(3)
+    col7, col8, col9 = st.beta_columns(3)
+    col10, col11, col12 = st.beta_columns(3)
     col13, col14, col15 = st.beta_columns(3)
     col16, col17, col18 = st.beta_columns(3)
     col19, col20, col21 = st.beta_columns(3)
 
     # We are using these features to feed the ML pipeline
     # - values copied from check_variables_for_UI() result
-    # {'LotArea', 'GrLivArea', 'BsmtUnfSF', 'KitchenQual', 'BsmtFinSF1',
+    #  'LotArea', 'GrLivArea', 'BsmtUnfSF', 'KitchenQual', 'BsmtFinSF1',
     #  'GarageYrBlt', 'GarageArea', 'TotalBsmtSF', '2ndFlrSF', 'MasVnrArea',
     #  'OverallQual', '1stFlrSF', 'OverallCond', 'LotFrontage', 'GarageFinish',
     #  'BedroomAbvGr', 'BsmtFinType1', 'OpenPorchSF', 'YearBuilt',
-    #  'BsmtExposure', 'YearRemodAdd'}
+    #  'BsmtExposure', 'YearRemodAdd'
 
     # create an empty DataFrame, which will be the live data
     X_live = pd.DataFrame([], index=[0])

@@ -16,8 +16,11 @@ def load_housing_price_data():
     return df
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
-def load_clean_data():
-    df = pd.read_csv("outputs/datasets/cleaned/clean_house_price_records.csv")
+def load_clean_data(dataset):
+    if dataset=="inherited":
+        df = pd.read_csv("outputs/datasets/cleaned/clean_inherited_houses.csv")
+    else:
+        df = pd.read_csv("outputs/datasets/cleaned/clean_house_price_records.csv")
     return df
 
 def load_pkl_file(file_path):

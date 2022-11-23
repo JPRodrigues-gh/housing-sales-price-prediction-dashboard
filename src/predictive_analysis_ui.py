@@ -14,11 +14,4 @@ def predict_sale_price(X_live, features, pipeline):
     # predict
     sale_price_prediction = pipeline.predict(X_live_sale_price)
 
-    # create logic to display the results
-
-    statement = (
-        f"* The predicted selling price for this house "
-        f"is {sale_price_prediction.round(2)}"
-        )
-
-    st.write(statement)
+    return float(sale_price_prediction.round(2))
