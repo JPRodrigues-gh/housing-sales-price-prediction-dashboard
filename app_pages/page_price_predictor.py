@@ -32,8 +32,12 @@ def page_price_predictor_body():
         f"* Below are the details of the inherited "
         f"houses and their respective price predictions."
         )
-    predict_inherited_house_price(price_pipe, price_features)
-
+    total_price = predict_inherited_house_price(price_pipe, price_features)
+    total_price = "%.2f" % total_price
+    st.info(
+        f"The sum total sale price for all your "
+        f"properties is \u20AC{total_price}"
+        )
     st.write("---")
 
     # Generate Live Data
@@ -55,17 +59,18 @@ def page_price_predictor_body():
                                               price_pipe)
         # logic to display the sale price
         statement = (
-            f"* The predicted selling price for this house "
+            f"The predicted selling price for this house "
             f"is \u20AC{price_prediction}"
             )
 
-        st.write(statement)
+        st.info(statement)
 
 
 def predict_inherited_house_price(price_pipe, price_features):
     inherited = load_clean_data("inherited")
     row_count = len(inherited)
     inherited.index = range(1, row_count+1)
+    total_price = 0
     for x in range(row_count):
         X_live = inherited.iloc[[x]]
         st.write(X_live)
@@ -77,8 +82,10 @@ def predict_inherited_house_price(price_pipe, price_features):
             f"* The predicted selling price for house "
             f"{x+1} is \u20AC{price_prediction}"
             )
+        total_price += float(price_prediction)
         st.write(statement)
-
+        
+    return total_price
 
 def check_variables_for_UI(price_features):
     import itertools
