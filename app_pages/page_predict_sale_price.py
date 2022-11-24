@@ -12,7 +12,8 @@ def page_predict_sale_price_body():
     ver = 'v1'
     path = "outputs/ml_pipeline/predict_saleprice/v1"
     sale_price_pipe = load_pkl_file(f"{path}/best_regressor_pipeline.pkl")
-    sale_price_feat_importance = plt.imread(f"{path}/feature_importance.png")
+    feat_importance = pd.read_csv(f"{path}/feature_importance.csv")
+    feat_importance_plot = plt.imread(f"{path}/feature_importance.png")
     X_train = pd.read_csv(f"{path}/X_train.csv")
     X_test = pd.read_csv(f"{path}/X_test.csv")
     y_train = pd.read_csv(f"{path}/y_train.csv")
@@ -40,8 +41,8 @@ def page_predict_sale_price_body():
 
     # show best features
     st.write("### The features the model was trained on and their importance")
-    st.write(X_train.columns.to_list())
-    st.image(sale_price_feat_importance)
+    st.write(feat_importance)
+    st.image(feat_importance_plot)
     st.write("---")
 
     # evaluate pipeline performance
