@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src.file_management import load_clean_data, load_housing_price_data
+from src.file_management import load_housing_price_data
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -10,14 +10,12 @@ sns.set_style("whitegrid")
 def page_sale_price_study_body():
 
     # load data
-    # df = load_clean_data("clean")
     df = load_housing_price_data()
 
     # hard copied from sale price study notebook
-    # The 6 variables that correlate to Sale Price
+    # The 4 variables that correlate to Sale Price
     # These variables will be tested on strength to predicting Sale Price
-    corr_var_list = ['1stFlrSF', 'GarageArea', 'GrLivArea',
-                     'OverallQual', 'TotalBsmtSF', 'YearBuilt']
+    corr_var_list = ['GarageArea', 'GrLivArea', 'OverallQual', 'YearBuilt']
 
     st.write("### House Sale Price Study")
     st.info(
@@ -39,11 +37,10 @@ def page_sale_price_study_body():
 
     # Correlation Study Summary
     st.write(
-        f"* A correlation study was conducted in the sale price study notebook"
-        f" to better understand how the variables correlate to sale price.\n"
+        f"* Pearson and Spearman correlation studies were conducted "
+        f"to better understand how the variables correlate to sale price.\n"
         f"* The most correlated variable are: \n"
-        f"  * **1stFlrSF, GarageArea, GrLivArea, "
-        f"OverallQual, TotalBsmtSF, YearBuilt**"
+        f"  * **GrLivArea, GarageArea, OverallQual, YearBuilt**"
     )
 
     # Text based on "sale price study" notebook
@@ -52,11 +49,9 @@ def page_sale_price_study_body():
         f"#### The correlations and plots interpretation converge.\n"
         f"* The following are the variables isolated in the"
         f" correlation study:\n"
-        f"* 1stFlrSF: First Floor square feet\n"
-        f"* GarageArea: Size of garage in square feet\n"
         f"* GrLivArea: Above grade (ground) living area square feet\n"
+        f"* GarageArea: Size of garage in square feet\n"
         f"* OverallQual: Rates the overall material and finish of the house\n"
-        f"* TotalBsmtSF: Total square feet of basement area\n"
         f"* YearBuilt: Original construction date\n\n"
         f"* The plots show that the variables, isolated in the"
         f" correlation study"
@@ -77,8 +72,7 @@ def variable_correlation_to_sale_price(df_eda):
     # function created using "sale price study" notebook
     # "Visualize variable correlation to Sale Price" section
     target_var = 'SalePrice'
-    corr_var_list = ['1stFlrSF', 'GarageArea', 'GrLivArea',
-                     'OverallQual', 'TotalBsmtSF', 'YearBuilt']
+    corr_var_list = ['GrLivArea', 'GarageArea', 'OverallQual', 'YearBuilt']
     for col in corr_var_list:
         plot_numerical(df_eda, col, target_var)
         st.write("\n\n")
