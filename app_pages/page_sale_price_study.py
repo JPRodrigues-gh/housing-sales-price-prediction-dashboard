@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src.file_management import load_housing_price_data
+from src.file_management import load_clean_data, load_housing_price_data
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -10,6 +10,7 @@ sns.set_style("whitegrid")
 def page_sale_price_study_body():
 
     # load data
+    # df = load_clean_data("clean")
     df = load_housing_price_data()
 
     # hard copied from sale price study notebook
