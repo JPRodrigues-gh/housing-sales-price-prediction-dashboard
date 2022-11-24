@@ -1,2 +1,5 @@
-0,1,2,3
-1stFlrSF,GarageArea,GrLivArea,YearBuilt
+Feature,Importance
+GrLivArea,0.4028057980304334
+GarageArea,0.2204066670325669
+YearBuilt,0.2161077300564162
+1stFlrSF,0.1606798048805836
