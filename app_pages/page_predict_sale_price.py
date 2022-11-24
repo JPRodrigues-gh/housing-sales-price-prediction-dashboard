@@ -41,7 +41,7 @@ def page_predict_sale_price_body():
 
     # show best features
     st.write("### The features the model was trained on and their importance")
-    st.write(feat_importance.iloc[:, 0].values)
+    st.write(feat_importance.loc[:1])
     st.image(feat_importance_plot)
     st.write("---")
 
