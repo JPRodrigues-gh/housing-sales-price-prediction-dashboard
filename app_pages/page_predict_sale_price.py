@@ -40,8 +40,16 @@ def page_predict_sale_price_body():
     st.write("---")
 
     # show best features
-    st.write("### The features the model was trained on and their importance")
-    st.write(feat_importance.loc[:1])
+    st.write("### The features the model was trained on and their importance:")
+    cnt = 0
+    for feat_str in feat_importance['Feature'].sort_values():
+        if cnt == 0:
+            new_str = feat_str
+            cnt = 1
+        else:
+            new_str = new_str + ', ' + feat_str 
+
+    st.write(new_str)
     st.image(feat_importance_plot)
     st.write("---")
 
