@@ -139,8 +139,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -150,8 +149,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -161,8 +159,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -172,8 +169,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -183,8 +179,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -194,8 +189,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -205,8 +199,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -240,8 +233,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -251,8 +243,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -262,8 +253,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -281,8 +271,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -292,8 +281,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -303,8 +291,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -314,8 +301,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -325,8 +311,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -336,8 +321,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
@@ -347,8 +331,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
-            value=df[feature].median(),
-            format='%i'
+            value=df[feature].median()
             )
         X_live[feature] = st_widget
 
