@@ -13,9 +13,9 @@ def page_sale_price_study_body():
     df = load_housing_price_data()
 
     # hard copied from sale price study notebook
-    # The 4 variables that correlate to Sale Price
+    # The 5 variables that correlate to Sale Price
     # These variables will be tested on strength to predicting Sale Price
-    corr_var_list = ['GarageArea', 'GrLivArea', 'OverallQual', 'YearBuilt']
+    corr_var_list = ['GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt']
 
     st.write("### House Sale Price Study")
     st.info(
@@ -37,10 +37,10 @@ def page_sale_price_study_body():
 
     # Correlation Study Summary
     st.write(
-        f"* Pearson and Spearman correlation studies were conducted "
+        f"* Correlation studies were conducted, using the Pearson and Spearman methods "
         f"to better understand how the variables correlate to sale price.\n"
         f"* The most correlated variable are: \n"
-        f"  * **GrLivArea, GarageArea, OverallQual, YearBuilt**"
+        f"  * **GarageArea, GrLivArea, OverallQual, TotalBsmtSF, YearBuilt**"
     )
 
     # Text based on "sale price study" notebook
@@ -49,14 +49,14 @@ def page_sale_price_study_body():
         f"#### The correlations and plots interpretation converge.\n"
         f"* The following are the variables isolated in the"
         f" correlation study:\n"
-        f"* GrLivArea: Above grade (ground) living area square feet\n"
         f"* GarageArea: Size of garage in square feet\n"
+        f"* GrLivArea: Above grade (ground) living area square feet\n"
         f"* OverallQual: Rates the overall material and finish of the house\n"
+        f"* TotalBsmtSF: Total square feet of basement area\n"
         f"* YearBuilt: Original construction date\n\n"
         f"* The plots show that the variables, isolated in the"
-        f" correlation study"
-        f", do indeed have a strong correlation and hence possibly strong "
-        f"predictive power for Sale Price\n"
+        f" correlation study, do indeed have a strong correlation and hence"
+        f" possibly strong predictive power for Sale Price\n"
     )
 
     # Code copied from "sale price study" notebook
@@ -65,14 +65,13 @@ def page_sale_price_study_body():
 
     # Individual plots per variable
     if st.checkbox("Variable correlation to Sale Price"):
-        variable_correlation_to_sale_price(df_eda)
+        variable_correlation_to_sale_price(df_eda, corr_var_list)
 
 
-def variable_correlation_to_sale_price(df_eda):
+def variable_correlation_to_sale_price(df_eda, corr_var_list):
     # function created using "sale price study" notebook
     # "Visualize variable correlation to Sale Price" section
     target_var = 'SalePrice'
-    corr_var_list = ['GrLivArea', 'GarageArea', 'OverallQual', 'YearBuilt']
     for col in corr_var_list:
         plot_numerical(df_eda, col, target_var)
         st.write("\n\n")
