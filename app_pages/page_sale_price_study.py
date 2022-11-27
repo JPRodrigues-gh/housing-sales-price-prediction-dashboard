@@ -15,7 +15,7 @@ def page_sale_price_study_body():
     # hard copied from sale price study notebook
     # The 5 variables that correlate to Sale Price
     # These variables will be tested on strength to predicting Sale Price
-    corr_var_list = ['GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt']
+    corr_var_list = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt']
 
     st.write("### House Sale Price Study")
     st.info(
