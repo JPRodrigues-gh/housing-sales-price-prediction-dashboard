@@ -18,10 +18,10 @@ def page_summary_body():
         f"ie. Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built "
         f"and the respective sale price, for houses built between 1872 and 2010.")
 
-    # copied from README file - "Business Requirements" section
+    # "Business Requirements" section
     st.success(
         f"The project has 2 business requirements:\n"
-        f"* 1 - The client is interested in discovering how house attributes correlate with the sale price. "
+        f"* 1 - The client is interested in discovering how house attributes correlate with the sale price.\n"
         f"  * The client expects data visualizations of the correlated variables against the sale price.\n"
         f"* 2 - The client is interested in predicting the house sales price from her 4 inherited houses, "
         f"and any other house in Ames, Iowa."
