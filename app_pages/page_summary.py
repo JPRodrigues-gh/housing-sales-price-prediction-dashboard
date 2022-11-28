@@ -29,8 +29,11 @@ def page_summary_body():
 
     # Link to README file, so the users can have access to full project documentation
     st.info(
-        # f"* For additional information, please visit and **read** the "
-        # f"[Project README file](/workspace/housing-sales-price-prediction-dashboard/README.md)"
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/JPRodrigues-gh/housing-sales-price-prediction-dashboard/blob/main/README.md)"
+        )
+
+    st.info(
         f"**Dataset Content Guidelines**\n\n"
         f"|Variable|Meaning|Units|\n"
         f"|:----|:----|:----|\n"
