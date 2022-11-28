@@ -64,6 +64,7 @@ Although your friend has an excellent understanding of property prices in her ow
     * Refer back to the Scikit-learn lesson, Unit Notebook 6: Cross-Validation Search Part 2.
       * At the end of the notebook, is a list of hyperparameter options and values to start with, for the family of algorithms covered in the course.
 
+
 ## ML Business Case
 
 ### Business Case Assessment
@@ -132,7 +133,7 @@ The dashboard should contain:
 * List the details of the inherited houses and their respective price predictions.
 * Display the sum total of all the predicted house sale prices.
 * A Set of widget inputs, which relate to house sales dataset.
-  * All the features are available to the client for capturing attributes of the house for which they require a price prediction.
+  * The best features, discovered during feature engineering notebook, are available to the client for capturing attributes of the house for which they require a price prediction.
 * "Run predictive analysis" button that serves the house data, provided by the client, to the ML pipelines, and predicts the sale price for the house and displays the result to the client.
 
 ### Page 4: Project Hypothesis and Validation
@@ -147,8 +148,10 @@ The dashboard should contain:
 * Feature importance: List the features and plot the best features
 * Pipeline performance evaluation: Show model evaluation and plots
 
+
 ## Unfixed Bugs
 * No known bugs
+
 
 ## Deployment
 ### Heroku
@@ -163,11 +166,6 @@ The dashboard should contain:
 5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
 
-## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
-* For example, if we consider the Churnometer project you may have listed that Seaborn is used to display a bar plot on the customer-based churn study to visualize churn levels. All libraries used in your project are listed in your requirements.txt file.
-
-
 ## Credits 
 
 ### Content 
@@ -175,19 +173,18 @@ The dashboard should contain:
 - I used "https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues" as a repository template for this project
 - The data source for this project is located [here](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data)
 
-### Media
-
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
 
 ### References
 - This project was written based on the guidelines provided in the Customer Churn walk through project, data collection lesson.
   - Most of the functions used in this project were taken directly from the notebooks from the Customer Churn walk through project.
 - Functions from the ML Feature Engine lesson have also been used in this project
 - https://stackoverflow.com/
+- https://www.geeksforgeeks.org/
+- https://www.w3schools.com/
 - https://pandas.pydata.org/
 - https://numpy.org/
 
-## Acknowledgements (optional)
+
+## Acknowledgements
 - A big thanks to Code Institute team.
 - Precious Ijege my project mentor
