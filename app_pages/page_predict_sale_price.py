@@ -9,8 +9,8 @@ from src.eval_pipeline_perf import regression_evaluation_plots
 def page_predict_sale_price_body():
 
     # load sale price pipeline files
-    ver = 'v1'
-    path = "outputs/ml_pipeline/predict_saleprice/v1"
+    ver = 'v2'
+    path = f"outputs/ml_pipeline/predict_saleprice/{ver}"
     sale_price_pipe = load_pkl_file(f"{path}/best_regressor_pipeline.pkl")
     feat_importance = pd.read_csv(f"{path}/feature_importance.csv")
     feat_importance_plot = plt.imread(f"{path}/feature_importance.png")
