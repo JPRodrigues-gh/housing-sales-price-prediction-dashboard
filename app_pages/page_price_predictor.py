@@ -12,15 +12,15 @@ from src.predictive_analysis_ui import predict_sale_price
 def page_price_predictor_body():
 
     # load predict sale price files
-    ver = 'v1'
-    path = 'outputs/ml_pipeline/predict_saleprice'
+    ver = 'v2'
+    path = f"outputs/ml_pipeline/predict_saleprice/{ver}"
 
-    price_pipe = load_pkl_file(f"{path}/{ver}/best_regressor_pipeline.pkl")
-    price_features = (pd.read_csv(f"{path}/{ver}/X_train.csv")
+    price_pipe = load_pkl_file(f"{path}/best_regressor_pipeline.pkl")
+    price_features = (pd.read_csv(f"{path}/X_train.csv")
                       .columns
                       .to_list()
                       )
-    feature_importance = list(pd.read_csv(f"{path}/{ver}/feature_importance.csv")['Feature'])
+    feature_importance = list(pd.read_csv(f"{path}/feature_importance.csv")['Feature'])
 
     st.write("### Sale Price Prediction Interface")
     st.info(
