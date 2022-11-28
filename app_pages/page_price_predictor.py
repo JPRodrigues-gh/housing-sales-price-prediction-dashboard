@@ -105,19 +105,20 @@ def check_variables_for_UI(price_features):
 
 
 def DrawInputsWidgets():
-    
+
     # load dataset
     df = load_clean_data("clean")
     percentageMin, percentageMax = 0.4, 2.0
 
     # we create input widgets for all features
-    col1, col2, col3 = st.beta_columns(3)
-    col4, col5, col6 = st.beta_columns(3)
-    col7, col8, col9 = st.beta_columns(3)
-    col10, col11, col12,  = st.beta_columns(3)
-    col13, col14, col15,  = st.beta_columns(3)
-    col16, col17, col18  = st.beta_columns(3)
-    col19, col20, col21 = st.beta_columns(3)
+    col1, col2 = st.beta_columns(2)
+    col3, col4 = st.beta_columns(2)
+    # col4, col5, col6 = st.beta_columns(3)
+    # col7, col8, col9 = st.beta_columns(3)
+    # col10, col11, col12, = st.beta_columns(3)
+    # col13, col14, col15, = st.beta_columns(3)
+    # col16, col17, col18 = st.beta_columns(3)
+    # col19, col20, col21 = st.beta_columns(3)
 
     # We are using these features to feed the ML pipeline
     # - values copied from check_variables_for_UI() result
@@ -173,167 +174,167 @@ def DrawInputsWidgets():
             )
         X_live[feature] = st_widget
 
-    with col5:
-        feature = "OverallQual"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col5:
+    #     feature = "OverallQual"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col6:
-        feature = "2ndFlrSF"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col6:
+    #     feature = "2ndFlrSF"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col7:
-        feature = "BedroomAbvGr"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col7:
+    #     feature = "BedroomAbvGr"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col8:
-        feature = "KitchenQual"
-        st_widget = st.selectbox(
-            label=feature,
-            options=df[feature].unique()
-            )
-        X_live[feature] = st_widget
+    # with col8:
+    #     feature = "KitchenQual"
+    #     st_widget = st.selectbox(
+    #         label=feature,
+    #         options=df[feature].unique()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col9:
-        feature = "BsmtExposure"
-        st_widget = st.selectbox(
-            label=feature,
-            options=df[feature].unique()
-            )
-        X_live[feature] = st_widget
+    # with col9:
+    #     feature = "BsmtExposure"
+    #     st_widget = st.selectbox(
+    #         label=feature,
+    #         options=df[feature].unique()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col10:
-        feature = "BsmtFinType1"
-        st_widget = st.selectbox(
-            label=feature,
-            options=df[feature].unique()
-            )
-        X_live[feature] = st_widget
+    # with col10:
+    #     feature = "BsmtFinType1"
+    #     st_widget = st.selectbox(
+    #         label=feature,
+    #         options=df[feature].unique()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col11:
-        feature = "BsmtFinSF1"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col11:
+    #     feature = "BsmtFinSF1"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col12:
-        feature = "BsmtUnfSF"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col12:
+    #     feature = "BsmtUnfSF"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col13:
-        feature = "TotalBsmtSF"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col13:
+    #     feature = "TotalBsmtSF"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col14:
-        feature = "GarageFinish"
-        st_widget = st.selectbox(
-            label=feature,
-            options=df[feature].unique()
-            )
-        X_live[feature] = st_widget
+    # with col14:
+    #     feature = "GarageFinish"
+    #     st_widget = st.selectbox(
+    #         label=feature,
+    #         options=df[feature].unique()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col15:
-        feature = "GarageYrBlt"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col15:
+    #     feature = "GarageYrBlt"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col16:
-        feature = "MasVnrArea"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col16:
+    #     feature = "MasVnrArea"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col17:
-        feature = "OpenPorchSF"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col17:
+    #     feature = "OpenPorchSF"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col18:
-        feature = "LotArea"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col18:
+    #     feature = "LotArea"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col19:
-        feature = "LotFrontage"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col19:
+    #     feature = "LotFrontage"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col20:
-        feature = "OverallCond"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col20:
+    #     feature = "OverallCond"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
-    with col21:
-        feature = "YearRemodAdd"
-        st_widget = st.number_input(
-            label=feature,
-            min_value=df[feature].min()*percentageMin,
-            max_value=df[feature].max()*percentageMax,
-            value=df[feature].median()
-            )
-        X_live[feature] = st_widget
+    # with col21:
+    #     feature = "YearRemodAdd"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=df[feature].min()*percentageMin,
+    #         max_value=df[feature].max()*percentageMax,
+    #         value=df[feature].median()
+    #         )
+    #     X_live[feature] = st_widget
 
     st.write(X_live)
 
