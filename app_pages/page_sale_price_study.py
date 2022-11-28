@@ -40,7 +40,7 @@ def page_sale_price_study_body():
         f"* Correlation studies were conducted, using the Pearson and Spearman methods "
         f"to better understand how the variables correlate to sale price.\n"
         f"* The most correlated variable are: \n"
-        f"  * **GarageArea, GrLivArea, OverallQual, TotalBsmtSF, YearBuilt**"
+        f"  * **1stFlrSF, GarageArea, GrLivArea, OverallQual, TotalBsmtSF, YearBuilt**"
     )
 
     # Text based on "sale price study" notebook
@@ -49,6 +49,7 @@ def page_sale_price_study_body():
         f"#### The correlations and plots interpretation converge.\n"
         f"* The following are the variables isolated in the"
         f" correlation study:\n"
+        f"* 1stFlrSF: First Floor square feet\n"
         f"* GarageArea: Size of garage in square feet\n"
         f"* GrLivArea: Above grade (ground) living area square feet\n"
         f"* OverallQual: Rates the overall material and finish of the house\n"
